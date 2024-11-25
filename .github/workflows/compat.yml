@@ -9,13 +9,13 @@ on:
 jobs:
   # Validate the package.json exports and emitted CJS/ESM bundles.
   exports:
-    runs-on: ubuntu-latest
+    runs-on: blacksmith-4vcpu-ubuntu-2204
     steps:
       - name: Checkout
         uses: actions/checkout@v4
 
       - name: Set up Node.js
-        uses: actions/setup-node@v4
+        uses: useblacksmith/setup-node@v5
         with:
           node-version: 18
 
