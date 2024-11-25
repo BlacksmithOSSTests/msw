@@ -11,7 +11,7 @@ jobs:
     # They must have the write permissions to the repo in order to
     # trigger preview package publishing.
     if: github.event_name == 'workflow_dispatch' || github.event.review.state == 'approved'
-    runs-on: ubuntu-latest
+    runs-on: blacksmith-4vcpu-ubuntu-2204
     outputs:
       has-permissions: ${{ steps.checkPermissions.outputs.require-result }}
     steps:
